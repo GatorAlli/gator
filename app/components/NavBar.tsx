@@ -9,10 +9,10 @@ export function NavBar() {
     <div className="flex">
       <Image src={logo} alt="" width={100} height={100} />
       <Link href="/">
-        <Label>Work</Label>
+        <Label className="font-heading">Work</Label>
       </Link>
       <Link href="/">
-        <Label>Contact</Label>
+        <Label className="font-heading">Contact</Label>
       </Link>
     </div>
   );
