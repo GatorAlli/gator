@@ -1,5 +1,4 @@
 "use client";
-
 import { NavBar } from "./components/NavBar";
 import { Label } from "@/components/ui/label";
 import { Archivo_Black, IBM_Plex_Mono } from "next/font/google";
