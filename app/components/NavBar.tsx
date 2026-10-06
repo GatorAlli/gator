@@ -3,7 +3,6 @@ import Link from "next/link";
 import logo from "@/public/logo.png";
 import { Label } from "@/components/ui/label";
 
-import { Button } from "@/components/ui/button";
 export function NavBar() {
   return (
     <div className="flex">

@@ -1,5 +1,8 @@
+"use client";
+
 import { NavBar } from "./components/NavBar";
 import { Label } from "@/components/ui/label";
+import { AddressBookIcon, ArrowClockwiseIcon } from "@phosphor-icons/react";
 
 export default function App() {
   return (
