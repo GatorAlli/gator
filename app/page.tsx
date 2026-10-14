@@ -4,6 +4,7 @@ import { NavBar } from "./components/NavBar";
 import { Label } from "@/components/ui/label";
 import Image from "next/image";
 
+import giftour from "@/public/projects/giftour.png";
 import bilai from "@/public/projects/bilai.png";
 import clean from "@/public/projects/clean.png";
 
@@ -64,8 +65,9 @@ export default function App() {
               <Label className="text-[8px]">03 PROJECTS</Label>
             </div>
             <div className="relative">
-              <Image src={bilai} alt="" height={600} width={600} />
               <Image src={clean} alt="" height={600} width={600} />
+              <Image src={bilai} alt="" height={600} width={600} />
+              <Image src={giftour} alt="" height={600} width={600} />
             </div>
           </section>
         </div>
