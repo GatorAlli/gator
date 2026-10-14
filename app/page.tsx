@@ -1,27 +1,63 @@
 "use client";
 import { NavBar } from "./components/NavBar";
 import { Label } from "@/components/ui/label";
-import { Archivo_Black, IBM_Plex_Mono } from "next/font/google";
+import { Archivo_Black, IBM_Plex_Mono, Manrope } from "next/font/google";
 const archivoBlack = Archivo_Black({ weight: "400", subsets: ["latin"] });
 const ibmPlexMono = IBM_Plex_Mono({ weight: "600", subsets: ["latin"] });
+const manrope = Manrope({ weight: "600", subsets: ["latin"] });
 
 export default function App() {
   return (
     <main className="relative flex min-h-screen flex-col bg-black">
-       {/* video */}
+      {/* video */}
       <div className="fixed inset-0 z-0 h-screen w-screen overflow-hidden">
-        <video autoPlay loop muted playsInline className="h-full w-full object-cover opacity-80 saturate-50">
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="h-full w-full object-cover opacity-80 saturate-50"
+        >
           <source src="/starfield.mp4" type="video/mp4" />
         </video>
-        <div className="absolute inset-0 bg-[#050505]/50" /> </div>
+        <div className="absolute inset-0 bg-[#050505]/50" />{" "}
+      </div>
       {/* upper black body jeikhane teeth */}
       <div className="relative z-10 flex min-h-screen flex-col">
         <NavBar />
-      {/* text */}
-        <section className="flex flex-1 flex-col justify-center border-b border-[#4ade80]/30 px-10 pb-10 pt-10 text-[#F4F4F0]">
-         <h1 className={`max-w-[1280px] text-[clamp(64px,11vw,176px)] uppercase leading-[0.84] ${archivoBlack.className}`}>
-            WE MAKE<br />DIGITAL<br />WORK WITH<br />TEETH.  </h1>
-       </section>
+        {/* text */}
+        <div className="px-5 pt-5 ">
+          <Label className={`text-white text-[10px] ${ibmPlexMono.className}`}>
+            INDEPENDENT CREATIVE STUDIO
+          </Label>
+          <section className="flex flex-1 flex-col justify-center  text-[#F4F4F0]">
+            <h1
+              className={`max-w-[1280px] text-[clamp(64px,11vw,176px)] pt-20 pb-20 uppercase leading-[0.84] ${archivoBlack.className}`}
+            >
+              WE MAKE
+              <br />
+              DIGITAL
+              <br />
+              WORK WITH
+              <br />
+              TEETH.{" "}
+            </h1>
+
+            <Label className={`${manrope.className} text-[12px] pb-5`}>
+              &#47;&#47; WEBSITES THAT DON&apos;T SUCK
+            </Label>
+          </section>
+        </div>
+        <div className="bg-black border-t border-[#4ade80]/30 px-5 pt-4">
+          <section className="flex flex-1 flex-col justify-center b text-[#F4F4F0]">
+            <div
+              className={`${manrope.className}  pb-4 border-b flex justify-between`}
+            >
+              <Label className="text-[8px]">SELECTED WORK</Label>
+              <Label className="text-[8px]">03 PROJECTS</Label>
+            </div>
+          </section>
+        </div>
       </div>
     </main>
   );
