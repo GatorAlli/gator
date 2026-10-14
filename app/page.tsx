@@ -1,7 +1,14 @@
 "use client";
 import { NavBar } from "./components/NavBar";
+
 import { Label } from "@/components/ui/label";
+import Image from "next/image";
+
+import bilai from "@/public/projects/bilai.png";
+import clean from "@/public/projects/clean.png";
+
 import { Archivo_Black, IBM_Plex_Mono, Manrope } from "next/font/google";
+
 const archivoBlack = Archivo_Black({ weight: "400", subsets: ["latin"] });
 const ibmPlexMono = IBM_Plex_Mono({ weight: "600", subsets: ["latin"] });
 const manrope = Manrope({ weight: "600", subsets: ["latin"] });
@@ -55,6 +62,10 @@ export default function App() {
             >
               <Label className="text-[8px]">SELECTED WORK</Label>
               <Label className="text-[8px]">03 PROJECTS</Label>
+            </div>
+            <div className="relative">
+              <Image src={bilai} alt="" height={600} width={600} />
+              <Image src={clean} alt="" height={600} width={600} />
             </div>
           </section>
         </div>
