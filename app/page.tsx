@@ -65,7 +65,7 @@ export default function App() {
               <Label className="text-[8px]">03 PROJECTS</Label>
             </div>
             <div className="relative top-20 pb-135 ">
-              <div className="absolute left-20 border-primary opacity-50 border bg-black">
+              <div className="absolute left-20 border-primary opacity-50 border-1 bg-black">
                 <div
                   className={`flex justify-between ${ibmPlexMono.className} p-2 opacity-50 text-primary`}
                 >
@@ -77,10 +77,10 @@ export default function App() {
                   alt=""
                   height={450}
                   width={450}
-                  className="border-t-primary border-t-3  border"
+                  className="border-t-1 border-primary"
                 />
               </div>
-              <div className="absolute right-20 border-primary border opacity-50 top-15 bg-black">
+              <div className="absolute right-20 border-primary border-1 opacity-50 top-15 bg-black">
                 <div
                   className={`flex justify-between ${ibmPlexMono.className} p-2 opacity-50 text-primary `}
                 >
@@ -92,10 +92,10 @@ export default function App() {
                   alt=""
                   height={450}
                   width={450}
-                  className=" border-t-primary border-t-3 "
+                  className="border-t-1 border-primary"
                 />
               </div>
-              <div className="absolute left-3/10 z-20 top-40 border-primary border bg-black">
+              <div className="absolute left-3/10 z-20 top-40 border-primary border-1 bg-black">
                 <div
                   className={`flex justify-between ${ibmPlexMono.className} p-2 opacity-50 text-primary`}
                 >
@@ -107,7 +107,7 @@ export default function App() {
                   alt=""
                   height={600}
                   width={600}
-                  className=" border-primary border"
+                  className="border-t-1 border-primary"
                 />
               </div>
             </div>
