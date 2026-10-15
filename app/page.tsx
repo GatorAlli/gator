@@ -65,30 +65,54 @@ export default function App() {
               <Label className="text-[8px]">03 PROJECTS</Label>
             </div>
             <div className="relative top-20 pb-135 ">
-              <Image
-                src={giftour}
-                alt=""
-                height={450}
-                width={450}
-                className="absolute left-20 border-primary opacity-50 border-3"
-              />
-              <Image
-                src={bilai}
-                alt=""
-                height={450}
-                width={450}
-                className="absolute right-20 border-[#42d000] border-3 opacity-50 top-15"
-              />
-              <Image
-                src={clean}
-                alt=""
-                height={600}
-                width={600}
-                className="absolute left-3/10 z-20 top-40 border-[#42d000] border-3"
-              />
+              <div className="absolute left-20 border-primary opacity-50 border bg-black">
+                <div
+                  className={`flex justify-between ${ibmPlexMono.className} p-2 opacity-50 text-primary`}
+                >
+                  <Label className="text-[10px]">01</Label>
+                  <Label className="text-[10px]">2026</Label>
+                </div>
+                <Image
+                  src={giftour}
+                  alt=""
+                  height={450}
+                  width={450}
+                  className="border-t-primary border-t-3  border"
+                />
+              </div>
+              <div className="absolute right-20 border-primary border opacity-50 top-15 bg-black">
+                <div
+                  className={`flex justify-between ${ibmPlexMono.className} p-2 opacity-50 text-primary `}
+                >
+                  <Label className="text-[10px]">02</Label>
+                  <Label className="text-[10px]">2026</Label>
+                </div>
+                <Image
+                  src={bilai}
+                  alt=""
+                  height={450}
+                  width={450}
+                  className=" border-t-primary border-t-3 "
+                />
+              </div>
+              <div className="absolute left-3/10 z-20 top-40 border-primary border bg-black">
+                <div
+                  className={`flex justify-between ${ibmPlexMono.className} p-2 opacity-50 text-primary`}
+                >
+                  <Label className="text-[10px]">02</Label>
+                  <Label className="text-[10px]">2026</Label>
+                </div>
+                <Image
+                  src={clean}
+                  alt=""
+                  height={600}
+                  width={600}
+                  className=" border-primary border"
+                />
+              </div>
             </div>
             <div className={`border-t border-white/50 pt-20 `}>
-              <div className="flex flex-col justify-between items-center gap-x-12 gap-y- p-8 text-center">
+              <div className="flex flex-col justify-between items-center gap-y-1 p-8 text-center">
                 <Label className={`text-6xl ${archivoBlack.className}`}>
                   CLEAN
                 </Label>
