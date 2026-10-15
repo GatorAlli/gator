@@ -51,23 +51,41 @@ export default function App() {
               TEETH.{" "}
             </h1>
 
-            <Label className={`${manrope.className} text-[12px] pb-5`}>
+            <Label className={`${manrope.className} text-[10px] pb-5`}>
               &#47;&#47; WEBSITES THAT DON&apos;T SUCK
             </Label>
           </section>
         </div>
-        <div className="bg-black border-t border-[#4ade80]/30 px-5 pt-4">
+        <div className="bg-black border-t border-primary/30 px-5 pt-4">
           <section className="flex flex-1 flex-col justify-center b text-[#F4F4F0]">
             <div
-              className={`${manrope.className}  pb-4 border-b flex justify-between`}
+              className={`${archivoBlack.className}  pb-4 border-b flex justify-between`}
             >
               <Label className="text-[8px]">SELECTED WORK</Label>
               <Label className="text-[8px]">03 PROJECTS</Label>
             </div>
-            <div className="relative">
-              <Image src={clean} alt="" height={600} width={600} />
-              <Image src={bilai} alt="" height={600} width={600} />
-              <Image src={giftour} alt="" height={600} width={600} />
+            <div className="relative p-4">
+              <Image
+                src={giftour}
+                alt=""
+                height={600}
+                width={600}
+                className="absolute left-0 border-primary border-3"
+              />
+              <Image
+                src={bilai}
+                alt=""
+                height={600}
+                width={600}
+                className="absolute right-0 border-[#42d000] border-3 top-2"
+              />
+              <Image
+                src={clean}
+                alt=""
+                height={600}
+                width={600}
+                className="absolute left-1/4 z-20 top-10 border-[#42d000] border-3"
+              />
             </div>
           </section>
         </div>
