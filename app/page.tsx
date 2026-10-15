@@ -56,7 +56,7 @@ export default function App() {
             </Label>
           </section>
         </div>
-        <div className="bg-black border-t border-primary/30 px-5 pt-4">
+        <div className="bg-black border-t border-primary/50 px-5 pt-4">
           <section className="flex flex-1 flex-col justify-center b text-[#F4F4F0]">
             <div
               className={`${archivoBlack.className}  pb-4 border-b flex justify-between`}
@@ -64,28 +64,38 @@ export default function App() {
               <Label className="text-[8px]">SELECTED WORK</Label>
               <Label className="text-[8px]">03 PROJECTS</Label>
             </div>
-            <div className="relative p-4">
+            <div className="relative top-20 pb-135 ">
               <Image
                 src={giftour}
                 alt=""
-                height={600}
-                width={600}
-                className="absolute left-0 border-primary border-3"
+                height={450}
+                width={450}
+                className="absolute left-20 border-primary opacity-50 border-3"
               />
               <Image
                 src={bilai}
                 alt=""
-                height={600}
-                width={600}
-                className="absolute right-0 border-[#42d000] border-3 top-2"
+                height={450}
+                width={450}
+                className="absolute right-20 border-[#42d000] border-3 opacity-50 top-15"
               />
               <Image
                 src={clean}
                 alt=""
                 height={600}
                 width={600}
-                className="absolute left-1/4 z-20 top-10 border-[#42d000] border-3"
+                className="absolute left-3/10 z-20 top-40 border-[#42d000] border-3"
               />
+            </div>
+            <div className={`border-t border-white/50 pt-20 `}>
+              <div className="flex flex-col justify-between items-center gap-x-12 gap-y- p-8 text-center">
+                <Label className={`text-6xl ${archivoBlack.className}`}>
+                  CLEAN
+                </Label>
+                <Label className={`${ibmPlexMono.className} text-primary`}>
+                  CLEAN CLOTHES START HERE
+                </Label>
+              </div>
             </div>
           </section>
         </div>
