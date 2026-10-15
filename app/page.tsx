@@ -38,7 +38,7 @@ export default function App() {
           <Label className={`text-white text-[10px] ${ibmPlexMono.className}`}>
             INDEPENDENT CREATIVE STUDIO
           </Label>
-          <section className="flex flex-1 flex-col justify-center  text-[#F4F4F0]">
+          <section className="flex flex-1 flex-col justify-center text-[#F4F4F0]">
             <h1
               className={`max-w-[1280px] text-[clamp(64px,11vw,176px)] pt-20 pb-20 uppercase leading-[0.84] ${archivoBlack.className}`}
             >
@@ -65,7 +65,7 @@ export default function App() {
               <Label className="text-[8px]">03 PROJECTS</Label>
             </div>
             <div className="relative top-20 pb-135 ">
-              <div className="absolute left-20 border-primary opacity-50 border-1 bg-black">
+              <div className="absolute left-20 border-primary opacity-50 border bg-black">
                 <div
                   className={`flex justify-between ${ibmPlexMono.className} p-2 opacity-50 text-primary`}
                 >
@@ -77,10 +77,10 @@ export default function App() {
                   alt=""
                   height={450}
                   width={450}
-                  className="border-t-1 border-primary"
+                  className="border-t border-primary"
                 />
               </div>
-              <div className="absolute right-20 border-primary border-1 opacity-50 top-15 bg-black">
+              <div className="absolute right-20 border-primary border opacity-50 top-15 bg-black">
                 <div
                   className={`flex justify-between ${ibmPlexMono.className} p-2 opacity-50 text-primary `}
                 >
@@ -92,10 +92,10 @@ export default function App() {
                   alt=""
                   height={450}
                   width={450}
-                  className="border-t-1 border-primary"
+                  className="border-t border-primary"
                 />
               </div>
-              <div className="absolute left-3/10 z-20 top-40 border-primary border-1 bg-black">
+              <div className="absolute left-3/10 z-20 top-40 border-primary border bg-black">
                 <div
                   className={`flex justify-between ${ibmPlexMono.className} p-2 opacity-50 text-primary`}
                 >
@@ -107,7 +107,7 @@ export default function App() {
                   alt=""
                   height={600}
                   width={600}
-                  className="border-t-1 border-primary"
+                  className="border-t border-primary"
                 />
               </div>
             </div>
@@ -123,6 +123,31 @@ export default function App() {
             </div>
           </section>
         </div>
+        <section className="bg-[#e3e2da] ">
+          <div className="px-5">
+            <div
+              className={`flex justify-between ${ibmPlexMono.className} border border-b-black py-4`}
+            >
+              <Label>NO BROKEN LINKS</Label>
+              <Label>NO 90s NOSTALGIA TRIP</Label>
+            </div>
+            <div className="pt-20 flex justify-between gap-20 flex-wrap items-center">
+              {" "}
+              <Label className={`${archivoBlack.className} text-8xl`}>
+                WEBSITES <br /> THAT DON&apos;T <br /> SUCK.
+              </Label>
+              <Label
+                className={`${manrope.className} text-[30px] font text-right`}
+              >
+                Say goodbye to being charged premium <br /> for incomplete
+                websites that don&apos;t work. <br /> We don&apos;t ship
+                products with broken links <br />
+                that remind you of the 90s web.
+              </Label>
+            </div>
+          </div>
+          <div></div>
+        </section>
       </div>
     </main>
   );
