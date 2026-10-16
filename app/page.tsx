@@ -59,15 +59,19 @@ export default function App() {
           </section>
         </div>
         <div className="bg-black border-t border-primary/50 px-5 pt-4">
-          <section className="flex flex-1 flex-col justify-center b text-[#F4F4F0]">
+          <section className="flex flex-1 flex-col justify-center text-[#F4F4F0]">
             <div
               className={`${archivoBlack.className}  pb-4 border-b flex justify-between`}
             >
               <Label className="text-[8px]">SELECTED WORK</Label>
               <Label className="text-[8px]">03 PROJECTS</Label>
             </div>
-            <div className="relative top-20 pb-135 ">
-              <div className="absolute left-20 border-primary opacity-50 border bg-black">
+            <div className="relative w-full aspect-2/1">
+              <div
+                aria-hidden="true"
+                className="absolute inset-x-0 top-[80%] z-0 border-t border-white/50"
+              />
+              <div className="absolute left-[10%] top-[7%] w-[32%] border-primary opacity-50 border bg-black">
                 <div
                   className={`flex justify-between ${ibmPlexMono.className} p-2 opacity-50 text-primary`}
                 >
@@ -79,10 +83,10 @@ export default function App() {
                   alt=""
                   height={450}
                   width={450}
-                  className="border-t border-primary"
+                  className="block w-full h-auto border-t border-primary"
                 />
               </div>
-              <div className="absolute right-20 border-primary border opacity-50 top-15 bg-black">
+              <div className="absolute right-[10%] top-[15%] w-[32%] border-primary border opacity-50 bg-black">
                 <div
                   className={`flex justify-between ${ibmPlexMono.className} p-2 opacity-50 text-primary `}
                 >
@@ -94,10 +98,10 @@ export default function App() {
                   alt=""
                   height={450}
                   width={450}
-                  className="border-t border-primary"
+                  className="block w-full h-auto border-t border-primary"
                 />
               </div>
-              <div className="absolute left-3/10 z-20 top-40 border-primary border bg-black">
+              <div className="absolute left-1/2 -translate-x-1/2 top-[29%] w-[42%] z-20 border-primary border bg-black">
                 <div
                   className={`flex justify-between ${ibmPlexMono.className} p-2 opacity-50 text-primary`}
                 >
@@ -109,18 +113,16 @@ export default function App() {
                   alt=""
                   height={600}
                   width={600}
-                  className="border-t border-primary"
+                  className="block w-full h-auto border-t border-primary"
                 />
-              </div>
-            </div>
-            <div className={`border-t border-white/50 pt-20 `}>
-              <div className="flex flex-col justify-between items-center gap-y-1 p-8 text-center">
-                <Label className={`text-6xl ${archivoBlack.className}`}>
-                  CLEAN
-                </Label>
-                <Label className={`${ibmPlexMono.className} text-primary`}>
-                  CLEAN CLOTHES START HERE
-                </Label>
+                <div className="absolute inset-x-0 top-full flex flex-col items-center gap-y-1 pt-6 text-center">
+                  <Label className={`text-6xl ${archivoBlack.className}`}>
+                    CLEAN
+                  </Label>
+                  <Label className={`${ibmPlexMono.className} text-primary`}>
+                    CLEAN CLOTHES START HERE
+                  </Label>
+                </div>
               </div>
             </div>
           </section>
@@ -156,7 +158,10 @@ export default function App() {
           </div>
           <div className="bg-theme px-5 pt-20 pb-10">
             <div className="flex items-center gap-4 pb-10">
-              <span aria-hidden="true" className="size-3 shrink-0 rounded-full bg-black" />
+              <span
+                aria-hidden="true"
+                className="size-3 shrink-0 rounded-full bg-black"
+              />
               <Label className={`${ibmPlexMono.className}`}>
                 HAVE SOMETHING WITH A BITE?
               </Label>
