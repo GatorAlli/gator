@@ -2,6 +2,8 @@
 import { NavBar } from "./components/NavBar";
 
 import { Label } from "@/components/ui/label";
+
+import Link from "next/link";
 import Image from "next/image";
 
 import giftour from "@/public/projects/giftour.png";
@@ -131,7 +133,7 @@ export default function App() {
               <Label>NO BROKEN LINKS</Label>
               <Label>NO 90s NOSTALGIA TRIP</Label>
             </div>
-            <div className="pt-20 flex justify-between gap-20 flex-wrap items-center">
+            <div className="py-30 flex justify-between gap-20 flex-wrap items-center">
               {" "}
               <Label className={`${archivoBlack.className} text-8xl`}>
                 WEBSITES <br /> THAT DON&apos;T <br /> SUCK.
@@ -145,8 +147,34 @@ export default function App() {
                 that remind you of the 90s web.
               </Label>
             </div>
+            <div className="flex justify-between border-t border-black py-4">
+              <Label className={`${ibmPlexMono.className}`}>
+                MODERN WEBSITES
+              </Label>
+              <Label className={`${ibmPlexMono.className}`}>MADE EASY</Label>
+            </div>
           </div>
-          <div></div>
+          <div className="bg-theme px-5 pt-20 pb-10">
+            <div className="flex items-center gap-4 pb-10">
+              <span aria-hidden="true" className="size-3 shrink-0 rounded-full bg-black" />
+              <Label className={`${ibmPlexMono.className}`}>
+                HAVE SOMETHING WITH A BITE?
+              </Label>
+            </div>
+            <div className="border-b-2 border-black pb-3">
+              <Label className={`${archivoBlack.className} pb-15 text-9xl`}>
+                EMAIL US <br />
+                YOUR IDEA
+              </Label>
+              <Link
+                href="mailto:gator.gdev@gmail.com"
+                type="email"
+                className={`${manrope.className} text-4xl`}
+              >
+                gator.gdev@gmail.com
+              </Link>
+            </div>
+          </div>
         </section>
       </div>
     </main>
