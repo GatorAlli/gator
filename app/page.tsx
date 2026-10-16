@@ -3,6 +3,7 @@ import { NavBar } from "./components/NavBar";
 
 import { Label } from "@/components/ui/label";
 
+import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -11,12 +12,16 @@ import bilai from "@/public/projects/bilai.png";
 import clean from "@/public/projects/clean.png";
 
 import { Archivo_Black, IBM_Plex_Mono, Manrope } from "next/font/google";
+import { useState } from "react";
+import clsx from "clsx";
 
 const archivoBlack = Archivo_Black({ weight: "400", subsets: ["latin"] });
 const ibmPlexMono = IBM_Plex_Mono({ weight: "600", subsets: ["latin"] });
 const manrope = Manrope({ weight: "600", subsets: ["latin"] });
 
 export default function App() {
+  const [imageSelection, setImageSelection] = useState(1);
+
   return (
     <main className="relative flex min-h-screen flex-col bg-black">
       {/* video */}
@@ -86,20 +91,49 @@ export default function App() {
                   className="block w-full h-auto border-t border-primary"
                 />
               </div>
-              <div className="absolute right-[10%] top-[15%] w-[32%] border-primary border opacity-50 bg-black">
-                <div
-                  className={`flex justify-between ${ibmPlexMono.className} p-2 opacity-50 text-primary `}
-                >
-                  <Label className="text-[10px]">02</Label>
-                  <Label className="text-[10px]">2026</Label>
+              <div className="absolute right-[10%] top-[15%] w-[32%]">
+                <div className="border-primary border opacity-50 bg-black">
+                  <div
+                    className={`flex justify-between ${ibmPlexMono.className} p-2 opacity-50 text-primary `}
+                  >
+                    <Label className="text-[10px]">02</Label>
+                    <Label className="text-[10px]">2026</Label>
+                  </div>
+                  <Image
+                    src={bilai}
+                    alt=""
+                    height={450}
+                    width={450}
+                    className="block w-full h-auto border-t border-primary"
+                  />
                 </div>
-                <Image
-                  src={bilai}
-                  alt=""
-                  height={450}
-                  width={450}
-                  className="block w-full h-auto border-t border-primary"
-                />
+                <div className="absolute right-0 top-full flex gap-2 pt-60">
+                  {["Giftour", "bilai", "clean"].map((name, index) => {
+                    const selection = index + 1;
+                    const isSelected = imageSelection === selection;
+
+                    return (
+                      <Button
+                        key={name}
+                        variant="ghost"
+                        aria-pressed={isSelected}
+                        onClick={() => setImageSelection(selection)}
+                        className={clsx(
+                          ibmPlexMono.className,
+                          "rounded-none border-primary",
+                          isSelected
+                            ? "bg-primary text-black hover:bg-primary hover:text-black"
+                            : "bg-black text-white hover:bg-black hover:text-white",
+                        )}
+                      >
+                        <span className={clsx(isSelected ? "text-black" : "text-primary")}>
+                          {String(selection).padStart(2, "0")}
+                        </span>
+                        <span>{name}</span>
+                      </Button>
+                    );
+                  })}
+                </div>
               </div>
               <div className="absolute left-1/2 -translate-x-1/2 top-[29%] w-[42%] z-20 border-primary border bg-black">
                 <div
@@ -115,7 +149,7 @@ export default function App() {
                   width={600}
                   className="block w-full h-auto border-t border-primary"
                 />
-                <div className="absolute inset-x-0 top-full flex flex-col items-center gap-y-1 pt-6 text-center">
+                <div className="absolute inset-x-0 top-full flex flex-col items-center gap-1 pt-4 text-center">
                   <Label className={`text-6xl ${archivoBlack.className}`}>
                     CLEAN
                   </Label>
@@ -127,7 +161,7 @@ export default function App() {
             </div>
           </section>
         </div>
-        <section className="bg-[#e3e2da] ">
+        <section className="bg-[#e3e2da]">
           <div className="px-5">
             <div
               className={`flex justify-between ${ibmPlexMono.className} border border-b-black py-4`}
