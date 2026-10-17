@@ -1,5 +1,5 @@
 "use client";
-import { NavBar } from "./components/NavBar";
+import NavBar from "./components/NavBar";
 
 import { Label } from "@/components/ui/label";
 
