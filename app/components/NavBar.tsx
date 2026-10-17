@@ -39,7 +39,7 @@ export default function Navbar() {
         <img src="/gator-logo.png" alt="Gator" />
       </Link>
 
-      {/* Desktop navigation */}
+      {/* navigation */}
       <nav className="desktop-nav" aria-label="Main navigation">
         <Link
           href="/work"
