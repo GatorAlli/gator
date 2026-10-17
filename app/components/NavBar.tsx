@@ -27,7 +27,7 @@ export function NavBar() {
         className={`flex gap-9 text-[11px] uppercase text-[#F4F4F0] ${ibmPlexMono.className}`}
       >
         <Link
-          href="#work"
+          href="/work"
           className="group relative py-1 transition-colors hover:text-primary"
         >
           Work
