@@ -669,7 +669,7 @@ export default function Home() {
           </div>
         </section>
       </main>
-      {/* Double-chevron scroll control */}
+      {/* arrow */}
       <BackToTop />
       <style jsx global>{`
         .gator-home { --bg: #050805; --text: #f6f5ed; --muted: #adb8a4; --primary: #68cc35; --line: #374532; --font-display: var(--gator-archivo), Arial, sans-serif; --font-sans: var(--gator-manrope), Arial, sans-serif; --font-mono: var(--gator-mono), monospace; --serif: var(--gator-serif), Georgia, serif; --gutter: clamp(20px, 4vw, 76px); }
