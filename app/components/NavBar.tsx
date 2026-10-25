@@ -52,7 +52,7 @@ export default function Navbar() {
         <Link href="/#contact">Contact</Link>
       </nav>
 
-      {/* Mobile menu button */}
+      {/* Mobile menu */}
       <button
         type="button"
         className="menu-button"
