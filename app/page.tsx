@@ -47,7 +47,7 @@ export default function App() {
           </Label>
           <section className="flex flex-1 flex-col justify-center text-[#F4F4F0]">
             <h1
-              className={`max-w-[1280px] text-[clamp(64px,11vw,176px)] pt-20 pb-20 uppercase leading-[0.84] ${archivoBlack.className}`}
+              className={`max-w-[1280px] text-[clamp(40px,11vw,176px)] pt-20 pb-20 uppercase leading-[0.84] ${archivoBlack.className}`}
             >
               WE MAKE
               <br />
@@ -71,43 +71,70 @@ export default function App() {
               <Label className="text-[8px]">SELECTED WORK</Label>
               <Label className="text-[8px]">03 PROJECTS</Label>
             </div>
-            <div className="relative w-full aspect-2/1">
+            <div className="relative flow-root">
               <div
                 aria-hidden="true"
-                className="absolute inset-x-0 top-[80%] z-0 border-t border-white/50"
+                className="absolute inset-x-0 bottom-6 z-0 border-t border-white/50"
               />
-              <div className="absolute left-[10%] top-[7%] w-[32%] border-primary opacity-50 border bg-black">
+              <div className="absolute left-[2%] top-[7%] w-[40%] border-primary opacity-50 border bg-black sm:left-[10%] sm:w-[32%]">
                 <div
-                  className={`flex justify-between ${ibmPlexMono.className} p-2 opacity-50 text-primary`}
+                  className={`flex justify-between ${ibmPlexMono.className} p-1 text-primary sm:p-2`}
                 >
-                  <Label className="text-[10px]">01</Label>
-                  <Label className="text-[10px]">2026</Label>
+                  <Label className="text-[8px] sm:text-[10px]">01</Label>
+                  <Label className="text-[8px] sm:text-[10px]">2026</Label>
                 </div>
                 <Image
                   src={giftour}
-                  alt=""
+                  alt="Giftour project preview"
                   height={450}
                   width={450}
+                  sizes="(max-width: 639px) 40vw, 32vw"
                   className="block w-full h-auto border-t border-primary"
                 />
               </div>
-              <div className="absolute right-[10%] top-[15%] w-[32%]">
-                <div className="border-primary border opacity-50 bg-black">
-                  <div
-                    className={`flex justify-between ${ibmPlexMono.className} p-2 opacity-50 text-primary `}
-                  >
-                    <Label className="text-[10px]">02</Label>
-                    <Label className="text-[10px]">2026</Label>
-                  </div>
-                  <Image
-                    src={bilai}
-                    alt=""
-                    height={450}
-                    width={450}
-                    className="block w-full h-auto border-t border-primary"
-                  />
+              <div className="absolute right-[2%] top-[15%] w-[40%] border-primary border opacity-50 bg-black sm:right-[10%] sm:w-[32%]">
+                <div
+                  className={`flex justify-between ${ibmPlexMono.className} p-1 text-primary sm:p-2`}
+                >
+                  <Label className="text-[8px] sm:text-[10px]">02</Label>
+                  <Label className="text-[8px] sm:text-[10px]">2026</Label>
                 </div>
-                <div className="absolute right-0 top-full flex gap-2 pt-60">
+                <Image
+                  src={bilai}
+                  alt="Bilai project preview"
+                  height={450}
+                  width={450}
+                  sizes="(max-width: 639px) 40vw, 32vw"
+                  className="block w-full h-auto border-t border-primary"
+                />
+              </div>
+              <div className="relative z-20 mx-auto mt-[24%] w-[76%] border-primary border bg-black sm:mt-[14.5%] sm:w-[58%] lg:w-[42%]">
+                <div
+                  className={`flex justify-between ${ibmPlexMono.className} p-1 text-primary sm:p-2`}
+                >
+                  <Label className="text-[8px] sm:text-[10px]">03</Label>
+                  <Label className="text-[8px] sm:text-[10px]">2026</Label>
+                </div>
+                <Image
+                  src={clean}
+                  alt="Clean project preview"
+                  height={600}
+                  width={600}
+                  sizes="(max-width: 639px) 76vw, (max-width: 1023px) 58vw, 42vw"
+                  className="block w-full h-auto border-t border-primary"
+                />
+              </div>
+            </div>
+            <div className="grid grid-cols-1 items-center gap-6 pt-4 pb-8 xl:grid-cols-[1fr_42%_1fr]">
+              <div className="flex min-w-0 flex-col items-center gap-1 text-center xl:col-start-2">
+                <Label className={`text-4xl sm:text-5xl lg:text-6xl ${archivoBlack.className}`}>
+                  CLEAN
+                </Label>
+                <Label className={`${ibmPlexMono.className} text-[10px] sm:text-sm text-primary`}>
+                  CLEAN CLOTHES START HERE
+                </Label>
+              </div>
+              <div className="flex min-w-0 flex-wrap justify-center gap-2 xl:justify-end">
                   {["Giftour", "bilai", "clean"].map((name, index) => {
                     const selection = index + 1;
                     const isSelected = imageSelection === selection;
@@ -133,30 +160,6 @@ export default function App() {
                       </Button>
                     );
                   })}
-                </div>
-              </div>
-              <div className="absolute left-1/2 -translate-x-1/2 top-[29%] w-[42%] z-20 border-primary border bg-black">
-                <div
-                  className={`flex justify-between ${ibmPlexMono.className} p-2 opacity-50 text-primary`}
-                >
-                  <Label className="text-[10px]">02</Label>
-                  <Label className="text-[10px]">2026</Label>
-                </div>
-                <Image
-                  src={clean}
-                  alt=""
-                  height={600}
-                  width={600}
-                  className="block w-full h-auto border-t border-primary"
-                />
-                <div className="absolute inset-x-0 top-full flex flex-col items-center gap-1 pt-4 text-center">
-                  <Label className={`text-6xl ${archivoBlack.className}`}>
-                    CLEAN
-                  </Label>
-                  <Label className={`${ibmPlexMono.className} text-primary`}>
-                    CLEAN CLOTHES START HERE
-                  </Label>
-                </div>
               </div>
             </div>
           </section>
@@ -164,18 +167,18 @@ export default function App() {
         <section className="bg-[#e3e2da]">
           <div className="px-5">
             <div
-              className={`flex justify-between ${ibmPlexMono.className} border border-b-black py-4`}
+              className={`flex justify-between ${ibmPlexMono.className} border border-b-black py-4 gap-4 [&>label]:text-[10px] sm:[&>label]:text-sm`}
             >
               <Label>NO BROKEN LINKS</Label>
               <Label>NO 90s NOSTALGIA TRIP</Label>
             </div>
-            <div className="py-30 flex justify-between gap-20 flex-wrap items-center">
+            <div className="py-12 sm:py-20 lg:py-30 flex flex-col items-start gap-8 lg:flex-row lg:justify-between lg:gap-12">
               {" "}
-              <Label className={`${archivoBlack.className} text-8xl`}>
+              <Label className={`${archivoBlack.className} text-[clamp(2.5rem,7vw,6rem)]`}>
                 WEBSITES <br /> THAT DON&apos;T <br /> SUCK.
               </Label>
               <Label
-                className={`${manrope.className} text-[30px] font text-right`}
+                className={`${manrope.className} text-[clamp(0.875rem,2.2vw,1.875rem)] leading-relaxed text-left lg:text-right`}
               >
                 Say goodbye to being charged premium <br /> for incomplete
                 websites that don&apos;t work. <br /> We don&apos;t ship
@@ -183,7 +186,7 @@ export default function App() {
                 that remind you of the 90s web.
               </Label>
             </div>
-            <div className="flex justify-between border-t border-black py-4">
+            <div className="flex justify-between gap-4 border-t border-black py-4 [&>label]:text-[10px] sm:[&>label]:text-sm">
               <Label className={`${ibmPlexMono.className}`}>
                 MODERN WEBSITES
               </Label>
@@ -201,14 +204,14 @@ export default function App() {
               </Label>
             </div>
             <div className="border-b-2 border-black pb-3">
-              <Label className={`${archivoBlack.className} pb-15 text-9xl`}>
+              <Label className={`${archivoBlack.className} pb-8 sm:pb-15 text-[clamp(2.5rem,8vw,8rem)]`}>
                 EMAIL US <br />
                 YOUR IDEA
               </Label>
               <Link
                 href="mailto:gator.gdev@gmail.com"
                 type="email"
-                className={`${manrope.className} text-4xl`}
+                className={`${manrope.className} break-all text-xl sm:text-3xl lg:text-4xl`}
               >
                 gator.gdev@gmail.com
               </Link>
